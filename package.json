@@ -5,6 +5,7 @@
   "repository": "git@github.com:aaddaamm/guilds-server-node.git",
   "author": "Adam Robinson <adam@mojotech.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
