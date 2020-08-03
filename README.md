@@ -1,1 +1,1 @@
-# guilds-server-ex
+# guilds-server-node
