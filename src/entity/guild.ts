@@ -2,18 +2,18 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class Guild {
-  @PrimaryGeneratedColumn()
-  id!: number;
+  @PrimaryGeneratedColumn("uuid")
+  id: number;
 
   @Column()
-  name!: string;
+  name: string;
 
   @Column()
-  type!: string;
+  type: string;
 
   @Column()
-  description!: string;
+  description: string;
 
   @Column()
-  subGroups!: boolean;
+  subGroups: boolean;
 }

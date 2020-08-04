@@ -1,43 +1,43 @@
-import { Entity, PrimaryColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class User {
-  @PrimaryColumn()
-  id!: number;
+  @PrimaryGeneratedColumn("uuid")
+  id: number;
 
   @Column()
-  firstName!: string;
+  firstName: string;
 
   @Column()
   lastName!: string;
 
   @Column()
-  street?: string;
+  mobile: string;
 
   @Column()
-  street2?: string;
+  email: string;
 
-  @Column()
-  city?: string;
+  @Column({ nullable: true })
+  street: string;
 
-  @Column()
-  state?: string;
+  @Column({ nullable: true })
+  street2: string;
 
-  @Column()
-  zipCode?: string;
+  @Column({ nullable: true })
+  city: string;
 
-  @Column()
-  description?: string;
+  @Column({ nullable: true })
+  state: string;
 
-  @Column()
-  mobile!: string;
+  @Column({ nullable: true })
+  zipCode: string;
 
-  @Column()
-  email!: string;
+  @Column({ nullable: true })
+  description: string;
 
-  @Column()
-  birthday?: string;
+  @Column({ nullable: true })
+  birthday: string;
 
-  @Column()
-  picture?: string;
+  @Column({ nullable: true })
+  picture: string;
 }
