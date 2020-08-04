@@ -1,8 +1,8 @@
-import express from "express";
+import express, { Request, Response } from "express";
 
-const router = new express.Router();
+const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", (req: Request, res: Response) => {
   res.send({
     firstName: "Adam",
     lastName: "Robinson",
@@ -15,7 +15,8 @@ router.get("/", (req, res) => {
     },
     mobile: '555-666-7777',
     email: '123@monkey.com',
-    birthday: '01/01/1908'
+    birthday: '01/01/1908',
+    picture: 'image.jpg'
   });
 });
 

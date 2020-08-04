@@ -5,14 +5,22 @@
   "repository": "git@github.com:aaddaamm/guilds-server-node.git",
   "author": "Adam Robinson <adam@mojotech.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "yarn run build",
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.7",
+    "express": "^4.17.1",
+    "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.3"
   }
 }
