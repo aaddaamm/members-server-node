@@ -1,4 +1,14 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+} from "typeorm";
+import { User } from "./user";
+import { Group } from "./group";
+import { Post } from "./post";
 
 @Entity()
 export class Guild {
@@ -14,6 +24,12 @@ export class Guild {
   @Column()
   description: string;
 
-  @Column()
-  subGroups: boolean;
+  @ManyToOne((type) => Group, (group) => group.guild)
+  groups: boolean;
+
+  @ManyToMany((type) => User, (user) => user.guilds)
+  users: User[];
+
+  @OneToMany((type) => Post, (post) => post.entity)
+  posts: Post[];
 }

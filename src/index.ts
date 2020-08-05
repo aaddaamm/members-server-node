@@ -36,9 +36,6 @@ createConnection({
     await userRepository.save(newUser);
 
     // tslint:disable-next-line:no-console
-    console.log(process.env);
-
-    // tslint:disable-next-line:no-console
     console.log("User has been saved.");
 
     const users = await userRepository.find();

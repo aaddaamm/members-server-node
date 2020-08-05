@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable } from "typeorm";
+
+import { Guild } from "./guild";
 
 @Entity()
 export class User {
@@ -40,4 +42,8 @@ export class User {
 
   @Column({ nullable: true })
   picture: string;
+
+  @ManyToMany((type) => Guild, (guild) => guild.users)
+  @JoinTable()
+  guilds: Guild[];
 }
