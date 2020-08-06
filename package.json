@@ -9,14 +9,16 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "yarn run build",
-    "start": "ts-node ./src/index.ts",
+    "start": "nodemon -w src --ext ts --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "apollo-server": "^2.16.1",
+    "class-validator": "^0.12.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.3.0",
+    "type-graphql": "^1.0.0-rc.3",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
