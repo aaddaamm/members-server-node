@@ -22,4 +22,4 @@ TYPEORM_MIGRATIONS = src/migration/**/*.ts
 TYPEORM_SUBSCRIBERS = src/subscriber/**/*.ts
 ```
 
-test
+test for local hooks
