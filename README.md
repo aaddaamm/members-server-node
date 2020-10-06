@@ -21,5 +21,3 @@ TYPEORM_ENTITIES = entity/*.js,modules/**/entity/*.js
 TYPEORM_MIGRATIONS = src/migration/**/*.ts
 TYPEORM_SUBSCRIBERS = src/subscriber/**/*.ts
 ```
-
-test for local hooks
