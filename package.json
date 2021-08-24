@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@hapi/hapi": "^20.1.5",
-    "prettier": "^2.3.2"
+    "@hapi/hapi": "^20.1.5"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
   }
 }
